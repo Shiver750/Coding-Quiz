@@ -1,0 +1,42 @@
+body {
+    padding: 0;
+    margin: 0;    
+    width: 100vw;
+    height: 100vh;  
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    /* background-color: aliceblue; */
+    opacity: 1.0;
+    /* padding-top: 7px; */
+    /* word-spacing: 4.5rem; */
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+h1, h2, a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 150%;
+}
+
+section {
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.option {
+    line-height: 300%;
+    margin-bottom: .6%;
+    justify-content: flex-start;
+    margin-right: 8%;
+}
+
+main {
+   /* justify-content: center; */
+
+}
