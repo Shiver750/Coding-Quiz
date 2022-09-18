@@ -5,17 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="reset" href="assets\css\reset.css"> 
     <link rel="stylesheet" href="assets\css\style.css">   
+    <title> Javascript Quiz </title>
 </head>
 <body>
     <header>
     <!-- <h1>Javascript Quiz</h1> -->
-        <a href="url here" class="Highscore-link">View Highscores</a>
-        <h2 class="timer-view">Timer: #</h2>
+        <a href="url here" id="leaderboard-link">View Highscores</a>
+        <time>Time: <span id="timer"></span></time>
     </header>
     <main>
-        <section class="question-container" id="question">
-            <h1>question text here</h1>
+        <section id="start-card" class="card">
+            <h2 id="title">Coding Quiz</h2>
+            <p>Answer the questions to test your Javascript knowledge in the alotted time!</p>
+            <button id="start-button" class="button">Begin Quiz</button>
         </section>
+
+        <section class="question-card" id="card">
+            <h2 id="question-text"></h2>
+        </section>
+
         <section class="option-container">
             <button class="option" id="op1">option 1</button>
             <button class="option" id="op2">option 2</button>
