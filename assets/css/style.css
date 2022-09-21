@@ -40,3 +40,12 @@ main {
    /* justify-content: center; */
 
 }
+
+.hide {
+    display: none;
+  }
+
+.choices button {
+    margin-bottom: 20px;
+    display: block;
+  }

@@ -9,55 +9,32 @@ var nameElement = document.querySelector('#name');
 
 
 const Questions = [{
-    id: 0,
     q: "Commonly used data types do NOT include:",
-    a: [
-        { text: "Strings", isCorrect: false },
-        { text: "Booleans", isCorrect: false },
-        { text: "Alerts", isCorrect: true },
-        { text: "Numbers", isCorrect: false },
-    ]
+    a: ['Strings', 'Booleans', 'Alerts', 'Numbers'],
+    answer: 'Alerts',
 },
 {
-    id: 1,
     q: "Arrays in Javascript can be used to store ____.",
-    a: [
-        { text: "Numbers and Strings", isCorrect: false },
-        { text: "Other Arrays", isCorrect: false },
-        { text: "Booleans", isCorrect: false },
-        { text: "All of the above", isCorrect: true },
-    ]
+    a: ['Numbers and Strings', 'Other Arrays', 'Booleans', 'All of the above'],
+    answer: 'All of the above',
 },
 {
-    id: 2,
     q: "String values must be enclosed within ____ when being assigned to variables.",
-    a: [
-        { text: "1. Commas", isCorrect: false },
-        { text: "2. Curly Brackets", isCorrect: false },
-        { text: "3. Quotes", isCorrect: true },
-        { text: "4. parentheses", isCorrect: false },
-    ]
+    a: ['Commas', 'Curly Brackets', 'Quotes', 'Parentheses'],
+    answer: 'Quotes',
 },
 {
-    id: 3,
     q: "The condition in an if/else statement is enclosed within ____.",
-    a: [
-        { text: "1. Quotes", isCorrect: false },
-        { text: "2. Curly Brackets", isCorrect: false },
-        { text: "3. Parentheses", isCorrect: true },
-        { text: "4. Square Brackets", isCorrect: false },
-    ]
+    a: ['Quotes', 'Curly Brackets', 'Parentheses', 'Square Brackets'],
+    answer: 'Parentheses',
 },
 {
-    id: 4,
     q: "A very useful tool used during development and debugging for printing content to the debugger is ____",
-    a: [
-        { text: "JavaScript", isCorrect: false },
-        { text: "terminal/bash", isCorrect: false },
-        { text: "for loops", isCorrect: false },
-        { text: "console.log", isCorrect: true },
-    ]
-}]
+    a: ['Javascript', 'Terminal/bash', 'for loops', 'console.log'],
+    answer: 'console.log',
+},
+];
+
 
 var currentQuestionIndex = 0;
 var time = parseInt(Questions.length * 15);
@@ -91,6 +68,10 @@ function getQuestion () {
         console.log(currentQuestion.a);
 
         // Create button for each choice
+        // const answerArray = Object.values(Questions);
+
+        // console.log(answerArray);
+
         var choice = currentQuestion.a[i];
         var choiceNode = document.createElement('button');
         choiceNode.setAttribute('class', 'choice');
@@ -112,8 +93,7 @@ function questionClick(event) {
     }
 
 // check if user guesssed wrong
-//PROBABLY WRONG, CHECK THIS
-if (buttonEl.value !== Questions.isCorrect) {
+if (buttonEl.value !== Questions[currentQuestionIndex].answer) {
 
     //subtract time
     time -=15;
