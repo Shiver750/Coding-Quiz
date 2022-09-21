@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="reset" href="assets\css\reset.css"> 
     <link rel="stylesheet" href="assets\css\style.css">   
-    <title> Javascript Quiz </title>
+    <title>Javascript Quiz</title>
 </head>
 <body>
+
     <header>
-    <!-- <h1>Javascript Quiz</h1> -->
-        <a href="url here" id="leaderboard-link">View Highscores</a>
-        <time>Time: <span id="timer"></span></time>
+        <a href="url here" id="highscores">View Highscores</a>
+        <time class="timer">Time: <span id="time"></span></time>
     </header>
+
     <main>
         <section id="start-card" class="card">
             <h2 id="title">Coding Quiz</h2>
@@ -20,19 +21,30 @@
             <button id="start-button" class="button">Begin Quiz</button>
         </section>
 
-        <section class="question-card" id="card">
+        <section class="hide" id="question-card">
             <h2 id="question-text"></h2>
+            <section id="choices" class="choices"></section>
         </section>
 
-        <section class="option-container">
+        <section id="end-card" class="hide">
+            <h2>Thats a wrap!</h2>
+            <h3>Your score is <span id="final-score"></span></h3>
+            <p>
+                Enter name: <input type="text" id="name">
+                <button id="submit">Submit</button>
+            </p>
+        </section>
+
+        <section id="feedback" class="feedback hide"></section>
+        <!-- <section class="option-card">
             <button class="option" id="op1">option 1</button>
             <button class="option" id="op2">option 2</button>
             <button class="option" id="op3">option 3</button>
             <button class="option" id="op4">option 4</button>
         </section>
-        <section class="result">
+        <section class="result"> -->
 
-        </section>
+        <!-- </section> -->
     </main>
     <script src="./assets/js/script.js"></script>
 </body>
